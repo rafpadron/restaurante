@@ -19,3 +19,8 @@ body{
     box-shadow: 0px 0px 5px #ddd;
 }
 
+.loading{
+    list-style: none;
+    text-decoration: none;
+}
+

@@ -9,8 +9,11 @@ export class RestauranteService {
 
   constructor(private _http: HttpClient) { }
 
-  getRestaurante() {
-    return this._http.get('http://192.168.7.105/api-rest/restaurantes-api.php/restaurantes')
-              .toPromise();
+  getRestaurantes(): Observable<any> {
+    return this._http.get(`http://localhost/api-rest/restaurantes-api.php/restaurantes`);
+  }
+
+  getRestaurante(id: string): Observable<any> {
+    return this._http.get(`http://localhost/api-rest/restaurantes-api.php/restaurante/` + id);
   }
 }

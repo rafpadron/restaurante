@@ -1,8 +1,17 @@
 <header id="header">
+  <a [routerLink]="['/']">
   <img src="../../assets/img/descargas.png" id="logo">
-    <h1>{{Titulo}}</h1>
+  </a>  
+  <h1>{{Titulo}}</h1>
   <div class="clearfix"></div>
 </header>
+<nav id="nav">
+  <ul>
+    <li><a [routerLink]="['/']">Inicio</a></li>
+    <li><a [routerLink]="['/']">Crear Restaurante</a></li>
+    <li><a [routerLink]="['/']">Donde como hoy?</a></li>
+  </ul>
+</nav>
 <section class="main">
-  <restaurant-list></restaurant-list>
+  <router-outlet></router-outlet>
 </section>
